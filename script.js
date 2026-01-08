@@ -1,20 +1,32 @@
-const toggle = document.getElementById("darkToggle");
-const body = document.body;
+// =====================
+// Dark Mode Toggle
+// =====================
+const toggle = document.getElementById("themeToggle");
 
-// Load saved preference
+// Load saved theme
 if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
+  document.body.classList.add("dark");
   toggle.textContent = "☀️";
 }
 
 toggle.addEventListener("click", () => {
-  body.classList.toggle("dark");
+  document.body.classList.toggle("dark");
 
-  if (body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-    toggle.textContent = "☀️";
-  } else {
-    localStorage.setItem("theme", "light");
-    toggle.textContent = "🌙";
+  const isDark = document.body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  toggle.textContent = isDark ? "☀️" : "🌙";
+});
+
+// =====================
+// Active Page Highlight
+// =====================
+const links = document.querySelectorAll(".nav-links a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
   }
 });
+
