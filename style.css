@@ -209,3 +209,12 @@ footer {
 .skill-card ul {
   padding-left: 18px;
 }
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.projects {
+  max-width: 1000px;
+  margin: auto;
+}
