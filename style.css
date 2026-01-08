@@ -263,3 +263,21 @@ a {
 footer {
   color: #94a3b8;
 }
+/* =====================
+   Navigation Link Fix
+===================== */
+
+nav a {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--border-accent);
+  text-decoration: underline;
+}
+
+/* Active page highlight */
+nav a.active {
+  color: var(--border-accent);
+}
