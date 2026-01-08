@@ -123,3 +123,18 @@ footer {
 .cv-button:hover {
   background: #1e40af;
 }
+.social-links {
+  margin-top: 12px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
