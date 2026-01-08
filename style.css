@@ -1,6 +1,266 @@
+this is the current css style code : /* =====================
+   RESET & BASE
+===================== */
+* {
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* =====================
+   COLOR VARIABLES
+===================== */
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --border-accent: #2563eb;
+}
+
+body.dark {
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --card-bg: #1e293b;
+  --nav-bg: #020617;
+  --border-accent: #38bdf8;
+}
+
+/* =====================
+   NAVBAR (FIXED)
+===================== */
+nav {
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+}
+
+nav a {
+  color: #1e293b; /* light mode */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+body.dark nav a {
+  color: #e5e7eb; /* dark mode */
+}
+
+nav a:hover {
+  color: var(--border-accent);
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: var(--border-accent);
+}
+
+/* =====================
+   HERO
+===================== */
+header {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.6rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #c7d2fe;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: var(--card-bg);
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  border-left: 5px solid var(--border-accent);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  margin-top: 25px;
+}
+
+/* =====================
+   LISTS
+===================== */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* =====================
+   PROFILE
+===================== */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-container img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--border-accent);
+}
+
+.profile-text {
+  flex: 1;
+}
+
+/* =====================
+   BUTTONS & LINKS
+===================== */
+.cv-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: var(--border-accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.cv-button:hover {
+  opacity: 0.9;
+}
+
+.social-links {
+  margin-top: 12px;
+}
+
+.social-links a {
+  margin-right: 12px;
+  font-weight: 600;
+  color: var(--border-accent);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   PROJECTS
+===================== */
+.projects {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--border-accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.project-card h2 {
+  margin-top: 0;
+}
+
+/* =====================
+   EXPERIENCE
+===================== */
+.experience {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.experience-card {
+  background-color: var(--card-bg);
+  padding: 22px;
+  margin-bottom: 22px;
+  border-left: 5px solid #0f766e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.experience-card h2 {
+  margin-top: 0;
+}
+
+.experience-card h3 {
+  margin-bottom: 5px;
+}
+
+.date {
+  font-style: italic;
+  color: #94a3b8;
+}
+
+/* =====================
+   SKILLS
+===================== */
+.skills {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-left: 5px solid var(--border-accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 /* =====================
    MODERN NAVBAR
 ===================== */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -55,55 +315,21 @@
   color: var(--border-accent);
 }
 
-/* Right controls */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
+/* Theme toggle */
 .nav-right button {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
   color: var(--text-color);
 }
 
-/* Hamburger (hidden on desktop) */
-#menuToggle {
-  display: none;
-  font-size: 1.6rem;
-}
-
-/* =====================
-   MOBILE NAVBAR
-===================== */
+/* Mobile (basic for now) */
 @media (max-width: 768px) {
-
-  #menuToggle {
-    display: block;
-  }
-
   .nav-links {
     display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background-color: var(--nav-bg);
-    border-top: 1px solid rgba(148, 163, 184, 0.15);
   }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 14px;
-    text-align: center;
-  }
+}
 
   .profile-container {
     flex-direction: column;
