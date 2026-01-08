@@ -281,3 +281,9 @@ nav a:hover {
 nav a.active {
   color: var(--border-accent);
 }
+nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+}
