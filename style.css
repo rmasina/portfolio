@@ -36,68 +36,39 @@ body.dark {
 /* =====================
    NAVBAR
 ===================== */
-.navbar {
+nav {
+  background-color: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 28px;
-  background-color: var(--nav-bg);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
 
-/* Logo */
-.logo {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--border-accent);
-  white-space: nowrap;
-}
-
-/* Nav links */
-.nav-links {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-
-.nav-links a {
+nav a {
   color: var(--text-color);
-  font-weight: 500;
   text-decoration: none;
-  position: relative;
+  font-weight: 600;
   white-space: nowrap;
 }
 
-/* Animated underline */
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background-color: var(--border-accent);
-  transition: width 0.3s ease;
+nav a:hover {
+  color: var(--border-accent);
+  text-decoration: underline;
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-}
-
-.nav-links a.active {
+nav a.active {
   color: var(--border-accent);
 }
 
-/* Theme toggle */
-.nav-right button {
+#darkToggle {
   background: none;
   border: none;
-  font-size: 1.1rem;
   cursor: pointer;
+  font-size: 1rem;
   color: var(--text-color);
 }
 
@@ -169,17 +140,28 @@ ul li {
 }
 
 /* =====================
-   PROJECTS / CARDS
+   BUTTONS
 ===================== */
-.projects,
-.experience {
+.cv-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: var(--border-accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* =====================
+   PROJECTS
+===================== */
+.projects {
   max-width: 1000px;
   margin: auto;
 }
 
-.project-card,
-.experience-card,
-.skill-card {
+.project-card {
   background-color: var(--card-bg);
   padding: 20px;
   margin-bottom: 20px;
@@ -188,12 +170,30 @@ ul li {
 }
 
 /* =====================
-   SKILLS GRID
+   EXPERIENCE
+===================== */
+.experience-card {
+  background-color: var(--card-bg);
+  padding: 22px;
+  margin-bottom: 22px;
+  border-left: 5px solid #0f766e;
+}
+
+/* =====================
+   SKILLS
 ===================== */
 .skills {
+  max-width: 1000px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-left: 5px solid var(--border-accent);
 }
 
 /* =====================
@@ -211,24 +211,19 @@ footer {
 ===================== */
 @media (max-width: 768px) {
 
-  .navbar {
-    padding: 12px 14px;
-    flex-wrap: nowrap;
+  nav {
+    flex-wrap: nowrap;         /* FORCE one line */
+    gap: 6px;                  /* tighter spacing */
+    padding: 10px 8px;
   }
 
-  .nav-links {
-    gap: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .nav-links a {
-    font-size: 0.9rem;
+  nav a {
+    font-size: 0.85rem;
     padding: 4px 6px;
   }
 
-  .nav-links::-webkit-scrollbar {
-    display: none;
+  #darkToggle {
+    font-size: 0.9rem;
   }
 
   .profile-container {
