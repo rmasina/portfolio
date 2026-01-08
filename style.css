@@ -218,3 +218,48 @@ header {
   max-width: 1000px;
   margin: auto;
 }
+/* =====================
+   Dark Mode Variables
+===================== */
+
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --border-accent: #2563eb;
+}
+
+body.dark {
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --card-bg: #1e293b;
+  --nav-bg: #020617;
+  --border-accent: #38bdf8;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+nav {
+  background-color: var(--nav-bg);
+}
+
+.project-card,
+.experience-card {
+  background-color: var(--card-bg);
+  border-left-color: var(--border-accent);
+}
+
+/* Links */
+a {
+  color: var(--border-accent);
+}
+
+/* Footer */
+footer {
+  color: #94a3b8;
+}
