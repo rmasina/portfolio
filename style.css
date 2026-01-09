@@ -334,3 +334,25 @@ footer {
     height: 26px;
   }
 }
+
+.cv-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+  margin-top: 10px;
+}
+
+.cv-request-form input,
+.cv-request-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.cv-request-form input:focus,
+.cv-request-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
