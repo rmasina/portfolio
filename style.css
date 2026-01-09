@@ -280,6 +280,54 @@ footer {
     justify-content: center;
     gap: 16px;
   }
+.cv-request {
+  max-width: 420px;
+  margin-top: 30px;
+}
+
+.cv-request h3 {
+  margin-bottom: 6px;
+}
+
+.cv-request p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.cv-request form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cv-request input,
+.cv-request textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.cv-request input:focus,
+.cv-request textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.cv-request button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+.cv-request button:hover {
+  opacity: 0.9;
+}
 
   .social-links a img {
     width: 26px;
