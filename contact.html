@@ -49,44 +49,62 @@
   </div>
 
   <!-- REQUEST CV -->
-  <div class="project-card cv-card">
+  <div class="project-card">
     <h2>Request My CV</h2>
-    <p class="cv-intro">
+    <p>
       Recruiters and hiring managers may request my CV using the form below.
     </p>
 
+    <!-- CV REQUEST FORM -->
     <form
       action="https://formspree.io/f/xwvvekky"
       method="POST"
-      class="cv-request-form"
+      style="max-width:480px; margin-top:20px;"
     >
       <input
         type="email"
         name="email"
         placeholder="Your email address"
         required
+        style="
+          width:100%;
+          padding:12px 14px;
+          margin-bottom:14px;
+          border-radius:6px;
+          border:1px solid #cbd5e1;
+          font-size:0.95rem;
+        "
       >
 
       <textarea
         name="message"
         placeholder="Optional message (role, company, opportunity)"
         rows="3"
+        style="
+          width:100%;
+          padding:12px 14px;
+          margin-bottom:16px;
+          border-radius:6px;
+          border:1px solid #cbd5e1;
+          font-size:0.95rem;
+        "
       ></textarea>
 
-      <button type="submit" class="cv-button primary">
-        Request CV
-      </button>
-    </form>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <button type="submit" class="cv-button">
+          Request CV
+        </button>
 
-    <div class="cv-alt">
-      <span>or</span>
-      <a
-        href="https://wa.me/265995882157?text=Hello%20Rex,%20I%20would%20like%20to%20request%20your%20CV."
-        target="_blank"
-      >
-        Request via WhatsApp
-      </a>
-    </div>
+        <a
+          href="https://wa.me/265995882157?text=Hello%20Rex,%20I%20would%20like%20to%20request%20your%20CV."
+          class="cv-button"
+          target="_blank"
+          style="background:#25D366;"
+        >
+          Request via WhatsApp
+        </a>
+      </div>
+    </form>
   </div>
 
   <!-- CONTACT DETAILS -->
